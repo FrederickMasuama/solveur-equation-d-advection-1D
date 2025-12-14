@@ -1,37 +1,39 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from solveur import*
+from solveur import *
 
 
-"""erreur = abs(u_num - sol_exacte_val)
-print("err est:",max(erreur))"""
-
-
-"""condition initiale"""
+# --- condition initiale ---
 def u0(x):
-    return np.exp(-100*(x-0.5)**2)
+    return np.exp(-100 * (x - 0.5)**2)
 
-"""paramètres"""
+# --- paramètres ---
 c = 1
 nx = 200
-xmin, xmax = 0, 1
+xmin, xmax = 0, 2
 T = 0.4
-ug, ud = float(input())
+ug = float(input("Bord gauche = "))
+ud = float(input("Bord droit = "))
 s = 1
-"""valeurs à essayer"""
-CFL_val = [0.5, 1.0, 1.2]
 
+# --- liste des CFL ---
+CFL_val = [0.5, 0.8, 1.0, 1.2]
 
-"""tests des valeurs de CFL"""
 for CFL in CFL_val:
+
     dx = (xmax - xmin) / nx
     dt = CFL * dx / c
 
-    solver = solveur_transport(c, nx, xmin, xmax, dt,T,s,ug,ud,p)
-    u_final = solver.run(u0, T)
+    # solveur
+    x, u_final, u_exacte = solveur_transport(
+        c, nx, xmin, xmax, dt, T, s, ug, ud, u0
+    )
 
-    plt.plot(solver.x, u_final, label=f"CFL = {CFL}")
+    plt.plot(x, u_final, label=f"CFL = {CFL}")
 
+plt.plot(x, u0(x), label="sol init")
 plt.legend()
-plt.title("Influence de la condition CFL sur la stabilité de l’Upwind")
+plt.title("Influence de la CFL sur la stabilité du schéma Upwind")
+plt.xlabel("x")
+plt.ylabel("u")
 plt.show()

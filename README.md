@@ -41,11 +41,11 @@ L’objectif du projet est double :
 
  Trois schémas de différences finies ont été implémentés :
 
-Schéma de Lax–Friedrichs
+* Schéma de Lax–Friedrichs
 
-Schéma décentré à gauche (upwind gauche)
+* Schéma décentré à gauche (upwind gauche)
 
-Schéma décentré à droite (upwind droite)
+* Schéma décentré à droite (upwind droite)
 
 Ces schémas sont appliqués sur un maillage uniforme en espace et en temps.
 Ils permettent de comparer :
@@ -62,19 +62,19 @@ c.
 
 Les méthodes sont testées sur trois fonctions représentatives :
 
-Pulsion gaussienne
+* Pulsion gaussienne
 
 Fonction régulière
 
 Adaptée à l’analyse de la diffusion et de la précision
 
-Onde carrée
+* Onde carrée
 
 Fonction discontinue
 
 Permet d’observer la dissipation numérique et la stabilité
 
-Onde sinusoïdale
+* Onde sinusoïdale
 
 Fonction périodique et régulière
 

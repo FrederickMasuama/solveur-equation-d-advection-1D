@@ -17,7 +17,7 @@ ud = float(input("Bord droit = "))
 s = 1
 
 # --- liste des CFL ---
-CFL_val = [0.5, 0.8, 1.0, 1.2]
+CFL_val = [0.5, 0.8, 1.0, 1.2, 2.0]
 
 for CFL in CFL_val:
 
@@ -37,3 +37,4 @@ plt.title("Influence de la CFL sur la stabilité du schéma Upwind")
 plt.xlabel("x")
 plt.ylabel("u")
 plt.show()
+

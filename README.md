@@ -37,7 +37,7 @@ L’objectif du projet est double :
 
 * En suite, par un exemple d'application, analyser leur stabilité, précision et convergence, en particulier au regard de la condition
 
- #Méthodes numériques
+ # Méthodes numériques
 
  Trois schémas de différences finies ont été implémentés :
 
@@ -58,7 +58,7 @@ l’adaptation du schéma au signe de la vitesse d’advection
 𝑐
 c.
 
-#Fonctions tests
+# Fonctions tests
 
 Les méthodes sont testées sur trois fonctions représentatives :
 
@@ -80,7 +80,7 @@ Fonction périodique et régulière
 
 Utilisée pour l’étude de la convergence et de l’erreur de phase
 
-##Condition de stabilité et convergence
+# Condition de stabilité et convergence
 La stabilité des schémas est étudiée via le nombre de Courant–Friedrichs–Lewy (CFL) :
 
 CFL

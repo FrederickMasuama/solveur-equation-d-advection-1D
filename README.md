@@ -80,7 +80,7 @@ Fonction périodique et régulière
 
 Utilisée pour l’étude de la convergence et de l’erreur de phase
 
-#Condition de stabilité et convergence
+##Condition de stabilité et convergence
 La stabilité des schémas est étudiée via le nombre de Courant–Friedrichs–Lewy (CFL) :
 
 CFL

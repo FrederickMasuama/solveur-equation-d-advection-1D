@@ -1,4 +1,4 @@
-"""                 SOLVEUR EQUATION D4aDVECTION
+"""                 SOLVEUR EQUATION D'ADVECTION
                         Frédérick MASUAMA
 """
 import numpy as np
